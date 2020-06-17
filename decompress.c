@@ -111,7 +111,7 @@ int decompress(const char* file_path, const int* quant_matrix, const char* outpu
 	}
 
 		
-	bitmap_pixel_rgb_t* pixels = (bitmap_pixel_rgb_t*)malloc((blocks_x*8 * blocks_y*8)*3);
+	bitmap_pixel_rgb_t* pixels = (bitmap_pixel_rgb_t*)malloc(sizeof(bitmap_pixel_rgb_t)*(blocks_x*8 * blocks_y*8));
 
 	bitmap_parameters_t parameters =
 	{
