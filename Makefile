@@ -9,7 +9,7 @@ OBJECTS=$(patsubst %.c, %.o, $(wildcard *.c))
 all: $(TARGET)
 
 $(TARGET): $(OBJECTS)
-	$(LD)  $(LDFLAGS) -o $@ $^
+	$(LD) -o $@ $^ $(LDFLAGS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) $^ -o $@
